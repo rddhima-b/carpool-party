@@ -173,13 +173,25 @@ async function findMatches(requests, userReq) {
 }
 
 function showPage(pageNum) {
+    // Hide all pages
     document.querySelectorAll('.form-page').forEach((el, i) => {
-        if (i === pageNum - 1) {
-            el.classList.remove('noDisplay');
-        } else {
-            el.classList.add('noDisplay');
-        }
+        el.classList.add('noDisplay');
+        // Remove required from all inputs in hidden pages
+        el.querySelectorAll('input, select').forEach(input => {
+            input.removeAttribute('required');
+        });
     });
+    // Show the requested page
+    const page = document.getElementById(`page${pageNum}`);
+    if (page) {
+        page.classList.remove('noDisplay');
+        // Add required to all inputs in the visible page
+        page.querySelectorAll('input, select').forEach(input => {
+            if (input.hasAttribute('name')) {
+                input.setAttribute('required', '');
+            }
+        });
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {

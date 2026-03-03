@@ -8,8 +8,7 @@
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="images/icon.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">   
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&display=swap" rel="stylesheet">
@@ -18,7 +17,7 @@
 
     <div class="app-container">
         <h1>CarPool Party</h1>
-        <p class="subtitle">
+        <p class="subtitle">                                                                                 
   
             Find people with similar routes and schedules to carpool together!
         </p>
@@ -28,11 +27,11 @@
             <div class="form-page" id="page1">
                 <div class="field">
                     <label for="name">Name</label>
-                    <input id="name" type="text" required />
+                    <input id="name" name="name" type="text" required />
                 </div>
                 <div class="field">
                     <label for="email">Email</label>
-                    <input id="email" type="email" placeholder="e.g. you@email.com" required />
+                    <input id="email" name="email" type="email" placeholder="e.g. you@email.com" required />
                 </div>
                 <button type="button" id="next1">Next</button>
             </div>
@@ -41,24 +40,24 @@
                 <div class="field-group">
                     <label>Starting Address</label>
                     <div class="field-row">
-                        <input id="originAddress" type="text" placeholder="Address Line" required class="flex2" />
+                        <input id="originAddress" name="originAddress" type="text" placeholder="Address Line" required class="flex2" />
                     </div>
                     <div class="field-row">
-                        <input id="originCity" type="text" placeholder="City" required />
-                        <input id="originState" type="text" placeholder="State" required />
-                        <input id="originZip" type="text" placeholder="Zip Code" required />
+                        <input id="originCity" name="originCity" type="text" placeholder="City" required />
+                        <input id="originState" name="originState" type="text" placeholder="State" required />
+                        <input id="originZip" name="originZip" type="text" placeholder="Zip Code" required />
                     </div>
                 </div>
                 <div class="spacer spacer-sm"></div>
                 <div class="field-group">
                     <label>Destination Address</label>
                     <div class="field-row">
-                        <input id="destAddress" type="text" placeholder="Address Line" required class="flex2" />
+                        <input id="destAddress" name="destAddress" type="text" placeholder="Address Line" required class="flex2" />
                     </div>
                     <div class="field-row">
-                        <input id="destCity" type="text" placeholder="City" required />
-                        <input id="destState" type="text" placeholder="State" required />
-                        <input id="destZip" type="text" placeholder="Zip Code" required />
+                        <input id="destCity" name="destCity" type="text" placeholder="City" required />
+                        <input id="destState" name="destState" type="text" placeholder="State" required />
+                        <input id="destZip" name="destZip" type="text" placeholder="Zip Code" required />
                     </div>
                 </div>
                 <div class="spacer spacer-md"></div>
@@ -70,7 +69,7 @@
                 <div class="row">
                     <div class="field">
                         <label for="day">Day</label>
-                        <select id="day">
+                        <select id="day" name="day">
                             <option>Sunday</option>
                             <option>Monday</option>
                             <option>Tuesday</option>
@@ -84,8 +83,8 @@
                     <div class="field">
                         <label for="time">Hour</label>
                         <div class="timeButton">
-                            <input id="time" type="number" min="1" max="12" required />
-                            <select id="ampm">
+                            <input id="time" name="time" type="number" min="1" max="12" required />
+                            <select id="ampm" name="ampm">
                                 <option>AM</option>
                                 <option>PM</option>
                             </select>

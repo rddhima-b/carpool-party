@@ -105,6 +105,6 @@ app.post("/route", async (req, res) => {
 
 // ------------------------------
 app.listen(3000, () => {
-    console.log("Backend server running on http://localhost:3000");
+    console.log("Backend server running on https://rddhima-b-github-io.onrender.com");
     // starts backend server
 });

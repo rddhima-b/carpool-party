@@ -104,7 +104,13 @@ app.post("/route", async (req, res) => {
 });
 
 // ------------------------------
-app.listen(3000, () => {
-    console.log("Backend server running on https://rddhima-b-github-io.onrender.com");
-    // starts backend server
+// app.listen(3000, () => {
+//     console.log("Backend server running on https://rddhima-b-github-io.onrender.com");
+//     // starts backend server
+// });
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });

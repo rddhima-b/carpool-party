@@ -91,7 +91,7 @@ async function getLatLonCached(address) {
 }
 
 async function getDrivingDistance(lat1, lon1, lat2, lon2) {
-    const res = await fetch("http://localhost:3000/route", {
+    const res = await fetch("https://rddhima-b-github-io.onrender.com", {
         method: "POST", //POST- sending JSON data to API
         headers: { "Content-Type": "application/json" }, //sending JSON data to server
         body: JSON.stringify({

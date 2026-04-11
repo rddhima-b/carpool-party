@@ -54,8 +54,7 @@ async function saveRequestToDB(req) {
 // geocoding and backend
 
 async function getLatLon(address) {
-    const url = `http://localhost:3000/geocode?address=${encodeURIComponent(address)}`;
-
+    const url = `https://rddhima-b-github-io.onrender.com/geocode?address=${encodeURIComponent(address)}`;
     let res;
     try {
         res = await fetch(url);
@@ -91,7 +90,7 @@ async function getLatLonCached(address) {
 }
 
 async function getDrivingDistance(lat1, lon1, lat2, lon2) {
-    const res = await fetch("https://rddhima-b-github-io.onrender.com", {
+    const res = await fetch("https://rddhima-b-github-io.onrender.com/route", {
         method: "POST", //POST- sending JSON data to API
         headers: { "Content-Type": "application/json" }, //sending JSON data to server
         body: JSON.stringify({
